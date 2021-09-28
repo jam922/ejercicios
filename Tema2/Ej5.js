@@ -1,25 +1,34 @@
 window.onload=function(){
-var sueldo = prompt("Intrduce tu sueldo sin decimales: ");
+var sueldo = prompt("Introduce tu sueldo sin decimales: ");
 sueldo = parseInt(sueldo);
 
-var anosant = prompt("Intrduce tu antigüedad; ");
-anosant= parseInt(anosant);
+var anos= prompt("Introduce tu antigüedad: ");
+anos= parseInt(anos);
 
 var c3 = document.getElementById("c3");
 console.log(c3);
-c3.innerHTML = sueldo;
+c3.innerHTML = `${sueldo}<br/>${anos}`;
 
-var c3 = document.getElementById("c3");
-c3.innerHTML = anosant;
 
-if(sueldo<500 && anosant >= 10){
+if(sueldo<500 && anos>= 10){
+    
+    var c4 = document.getElementById("c4");
+	console.log(c4);
+	c4.innerHTML = sueldo * 3;
 
-    c4.innerHTML = sueldo * 3;
 
-}else if(sueldo < 500 && anosant < 10){
+}else if(sueldo < 500 && anos < 10){
 
+	var c4 = document.getElementById("c4");
+	console.log(c4);
 	c4.innerHTML = sueldo * 2;
+}else if(sueldo >= 500){
+
+	var c4 = document.getElementById("c4");
+	console.log(c4);
+	c4.innerHTML = sueldo;
 }
+
 
 
 }
