@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang=es>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Ej1</title>
+		<script type="text/javascript" src="Ejemplo2.js" defer async></script>
+	</head>
+	<body>	
+			<div>Edad</div>
+			<div id="valorEdad" style="color: red;">..........</div>
+			<br>
+			<input type="button" value="Aceptar" onclick="abrirVentana()">
+	</body>
+			<script>
+				let edad = document.getElementById("idEdad").value;
+				
+				if(edad>=18){
+					alert("Eres mayor de edad");
+				}else
+					alert("Eres menor de edad");
+//document.getElementById("valorEdad").innerHTML=edad;
+			</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang=es>
+	<head>
+		<meta charset="utf-8"/>
+		<title>InfoPersonal</title>
+		<script type="text/javascript" src="Ejemplo1.js" defer async></script>
+	</head>
+	<body>	
+			<div>Nombre</div>
+			<div id="valorNombre" style="color: red;">.........</div>
+			<br>
+
+			<div>Apellido</div>
+			<div id="valorApellido" style="color: red;">..........</div>
+			<br>
+
+			<div>Edad</div>
+			<div id="valorEdad" style="color: red;">..........</div>
+			<br>
+	</body>
+	<script>
+		//rcuperar valores del padre
+		let nombre = document.getElementById("idNombre").value;
+		let apellido=document.getElementById("idApellido").value;
+		let edad=document.getElementById("idEdad").value;
+
+		//mostrar valores de la pag acutal
+		document.getElementById("valorNombre").innerHTML=nombre;
+		document.getElementById("valorApellido").innerHTML=apellido;
+		document.getElementById("valorEdad").innerHTML=edad;
+	</script>
+</html>
