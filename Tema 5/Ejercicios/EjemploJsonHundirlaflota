@@ -1,0 +1,17 @@
+JSON
+
+HUNDIR LA FLOTA
+
+JSON. 2 OBJETOS
+
+AUTOR 
+let autor= {
+	nombre:"Agustin",
+	apellidos:"Aguilera",
+	edad:64
+}
+
+JUGADOR
+let jugador = {
+	
+}
