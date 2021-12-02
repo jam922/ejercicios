@@ -1,0 +1,1 @@
+google-chrome --args --disable-web-security --user-data-dir="/home/alumno/Escritorio/Ejercicios/"
