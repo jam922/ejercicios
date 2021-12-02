@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>act 2.1</title>
+  </head>
+  <body id="body">
+
+    <div id="padre">
+      <p>Este es el primer párrafo</p>
+
+      <p>Este es el segundo párrafo</p>
+
+      <p>Este es el tercer párrafo</p>
+    </div>
+
+      <button type="button" onclick="numeros()">Cantidad de Hijos del DIV</button>
+    <p id="resultado"></p>
+    <p id="contenido"></p>
+  </body>
+  <script >
+  function numeros(){
+    let num =document.getElementById("padre");
+    document.querySelector("#resultado").innerHTML="El numero de elementos son: "+num.childNodes.length;
+    num.childNodes.forEach(function(e){
+        document.getElementById("contenido").innerHTML += e.nodeName+", ";
+
+    })
+  }
+
+</script>
+</html>

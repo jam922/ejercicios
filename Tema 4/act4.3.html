@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.3</title>
+  <style type="text/css">
+    #d,#s,#p{
+      color: red;
+    }
+    .azul{
+      color: blue;
+    }
+    .green{
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  
+  <form id="idParrafos">
+    <label>¿Mi Deporte Favorito?
+      <input type="text" name="deporte" id="deporte">
+    </label>
+    <br>
+    <label>¿Mi Serie Favorita?
+      <input type="text" name="serie" id="serie">
+    </label>
+    <br>
+    <label>¿Mi Película Favorita?
+      <input type="text" name="peli" id="peli">
+    </label>
+    <br>
+    <input type="button" value="Aceptar aficiones" onclick="aficiones()">
+  </form>
+    <div id="estilo">
+        <h1>MIS AFICIONES...</h1>
+          <p id="d"><span>¿Mi deporte favorito?</span></p>
+          <p id="s"><span>¿Mi serie favorita?</span></p>
+          <p id="p"><span>¿Mi película favorita?</span></p>
+    </div>
+</body>
+
+<script>
+  /**
+  *  Añadir un párrafo(con contenido)
+  */
+  function aficiones(){
+      var deporte = document.getElementById("deporte").value;
+      if(!!deporte){
+        let parrafo = document.querySelector("#d span");
+        parrafo.classList.add('green');
+        let d = document.createElement('p');
+        d.classList.add('azul');
+        let contenidod = document.createTextNode(deporte);   
+        let contenedod = document.getElementById("d");
+        d.appendChild(contenidod);
+        contenedod.appendChild(d);
+
+      }
+  
+      var serie = document.getElementById("serie").value;
+      if(!!serie){
+        let parrafos = document.querySelector("#s span");
+        parrafos.classList.add('green');
+        let s = document.createElement('p');
+        s.classList.add('azul');
+        let contenidos = document.createTextNode(serie);
+        let contenedos = document.getElementById("s");
+        s.appendChild(contenidos);
+        contenedos.appendChild(s);
+      }
+      
+
+      var peli = document.getElementById("peli").value;
+      if(!!peli){
+        let parrafop = document.querySelector("#p span");
+        parrafop.classList.add('green');
+        let p = document.createElement('p');
+        p.classList.add('azul');
+        let contenidop = document.createTextNode(peli);
+        let contenedop = document.getElementById("p");
+        p.appendChild(contenidop);
+        contenedop.appendChild(p);
+      }
+  }
+</script> 
+</html>

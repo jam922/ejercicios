@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.2</title>
+</head>
+<body>
+  
+  <div id="idParrafos">
+    <label>Numero de checkbox
+      <input type="text" name="numero" id="numero">
+      <input type="button" value="checkbox" onclick="checkbox()">
+    </label><br>
+  </div>
+</body>
+
+<script>
+  /**
+  *  Añadir un párrafo(con contenido)
+  */
+  function checkbox(){
+    // Creamos el párrafo y contenido
+    let num = document.getElementById("numero").value;
+    for(i=1;i<=num;i++){
+      let label = document.createElement('label'); 
+      let input = document.createElement('input'); 
+      let br = document.createElement('br');
+      let att = document.createAttribute("type");
+      att.value="checkbox";
+      input.setAttributeNode(att);
+       
+      let contenidop = document.createTextNode("Nuevo elemento:" +Math.random());
+      
+      let contenedor = document.getElementById("idParrafos");
+
+      br.appendChild(contenidop);
+      contenedor.appendChild(br);
+
+      input.appendChild(contenidop);
+      contenedor.appendChild(input);
+
+      label.appendChild(contenidop);
+      contenedor.appendChild(label);
+    }
+  }
+</script> 
+</html>

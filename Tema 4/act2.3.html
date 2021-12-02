@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>act 2.2</title>
+  </head>
+  <body id="body">
+
+    <h1 id="color" >
+      <span id="tamano">Este es el titulo dinamico</span>
+    </h1>
+
+    <button type="button" onclick="color('color')">
+      Cambiar Color
+    </button>
+
+    <button type="button" onclick="tamano('tamano')">
+      Cambiar Tamaño Fuente
+    </button>
+
+  </body>
+  <script>
+  function color(p) {
+   let el = document.getElementById(p);
+   let red = parseInt(Math.random()*255);
+   let green = parseInt(Math.random()*255);
+   let blue = parseInt(Math.random()*255);
+   let color_fondo = `rgb(${red},${green},${blue})`;
+   el.style.color = color_fondo;  
+  }
+  function tamano(e){
+    let element = document.getElementById(e);
+    let size = 5;
+    //let sizem = parseInt(32/3);
+    let size_final = `${size}px`;
+    element.style.fontsize = size_final;
+  }
+
+</script>
+</html>
